@@ -1,0 +1,48 @@
+\documentclass[a4paper,16pt]{article}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage{english} % main language
+\setotherlanguages{hindi, tamil, bengali, telugu, malayalam} % other languages 
+
+% font declarations for the other languages
+\newfontfamily\devanagarifont[Script=Devanagari]{Nirmala UI}
+\newfontfamily\tamilfont[Script=Tamil]{Nirmala UI}
+\newfontfamily\bengalifont[Script=Bengali]{Nirmala UI}
+\newfontfamily\telugufont[Script=Telugu]{Nirmala UI}
+\newfontfamily\malayalamfont[Script=Malayalam]{Nirmala UI}
+
+\begin{document}
+
+ \textbf{\Large Multiple language typesetting}
+\bigskip
+
+\par \textbf{English} 
+\par Knowledge is the supreme goal
+\medskip
+
+\textbf{Tamil}
+\par \selectlanguage{tamil}
+அறிவு மிகச் சிறந்த இலக்கு
+\medskip
+
+\textbf{Telugu} 
+\par\selectlanguage{telugu}
+నాలెడ్జ్ సుప్రీం గోల్
+\medskip
+
+\textbf{Malayalam} 
+\par \selectlanguage{malayalam}
+അറിവ് സുപ്രധാന ലക്ഷ്യമാണ്
+\medskip
+
+\textbf{Bengali} 
+\par\selectlanguage{bengali}
+জ্ঞান সর্বোচ্চ লক্ষ্য
+\medskip
+
+\textbf{Hindi} 
+\par \selectlanguage{hindi}
+ज्ञान सर्वोच्च लक्ष्य है
+\medskip
+
+\end{document}
