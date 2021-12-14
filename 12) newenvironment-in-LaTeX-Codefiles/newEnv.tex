@@ -1,0 +1,58 @@
+\documentclass{article} 
+\usepackage{color} 
+\newenvironment{bluetext} 
+{\begin{center}\color{blue}} 
+{\end{center}} 
+\begin{document} 
+This text is outside the new 
+environment. This  text is 
+outside the new environment. 
+This  text is outside the new 
+environment. 
+\begin{bluetext} 
+Testing to see whether this 
+text is in blue colour. 
+\end{bluetext} 
+some more text 
+\end{document} 
+---------------
+
+\documentclass{article} 
+\usepackage{color} 
+\newenvironment{bluetext}[1] 
+{\begin{center}\color{blue} 
+\textbf{\textit{#1}}\\[12pt] 
+} 
+{\end{center}} 
+\begin{document} 
+This text is outside the new 
+environment. This  text is 
+outside the new environment. 
+This  text is outside the new 
+environment. 
+\begin{bluetext}{My text in 
+blue} 
+Testing to see whether this 
+text is in blue colour. 
+\end{bluetext} 
+some more text 
+\end{document} 
+------------------
+
+\documentclass{article} 
+\renewenvironment{itemize}{\b
+egin{center}\large 
+}{\end{center}} 
+\begin{document} 
+This text is outside the new 
+environment. This  text is 
+outside the new environment. 
+This  text is outside the new 
+environment. 
+\begin{itemize} 
+Text inside itemize 
+ 
+Lets check the output 
+\end{itemize} 
+\end{document} 
+-----------------
