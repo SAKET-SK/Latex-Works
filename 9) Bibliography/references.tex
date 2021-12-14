@@ -1,0 +1,35 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath,cclicenses}
+\title{Tutorial on Bibliography}
+\author{Kannan Moudgalya \\ kannan@iitb.ac.in \\ \byncsa}
+\date{\today}
+\bibliographystyle{plain}
+
+\begin{document}
+\maketitle
+\newpage
+\section{Aryabhatta's Identity for Control Design}
+
+Polynomial equations of the form
+\begin{align*}
+X(z)D(z) + Y(z)N(z) = C(z)
+\end{align*}
+arise frequently in control system design.  In the above equation,
+$D(z)$, $N(z)$ and $C(z)$ are known polynomials and $X(z)$ and 
+$Y(z)$ are unknowns, to be determined.  This equation is known as 
+Diophantine equation \cite{vk79,tk80} and Aryabhatta's identity
+\cite{mv85}.  A solution technique to this identity is presented in
+\cite{cp82}.  Matlab and Scilab implementations of this solution are
+available on the web \cite{kmm1-07}.
+
+The textbook by \cite{kmm07} 
+illustrates several control design
+examples using Aryabhatta's identity.  The approach followed in this
+book is explained in \cite{ms04,km06}.  In addition to handling
+control design problems in conventional domains, this approach will 
+be useful also for naturally discrete time problems that arise in
+computing systems, see for example, \cite{mmr03,mrbm04,vs06}.
+
+
+\bibliography{ref}
+\end{document}
