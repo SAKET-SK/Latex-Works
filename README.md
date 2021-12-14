@@ -6,3 +6,5 @@
 5) Equations
 6) Numbering Equations
 7) Tables and Figures
+8) Beamer
+9) Bibilography
