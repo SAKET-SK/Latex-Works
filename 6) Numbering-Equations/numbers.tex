@@ -1,0 +1,41 @@
+\documentclass[12pt]{article}
+\usepackage
+[textwidth=8cm]
+{geometry}
+\usepackage{amsmath}
+
+\begin{document}
+The following proportional, derivative controller has two tuning parameters: $K$ and $\tau_d$.
+%
+% First equation
+%
+\begin{align*}
+u(t) & = K \left[ e(t)+
+\tau_d\frac{de(t)}{dt} \right] 
+%
+% Second equation
+%
+\intertext{We want to apply the above controller to the following equation:}
+%
+% LHS
+%
+\frac d{dt} 
+\begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} & =
+%
+% RHS
+%
+\begin{bmatrix} 
+0 & 0 & 1 \\
+0 & 0 & 0 \\
+0 & \alpha & 0 \\
+\end{bmatrix}
+\begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} +
+%
+% II Term
+%
+\begin{bmatrix} 0 \\ 0 \\ \beta \end{bmatrix} \mu
+\end{align*}
+The above equation is the model of a plant.
+\end{document}
+
+
