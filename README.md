@@ -9,3 +9,4 @@
 8) Beamer
 9) Bibilography
 10) Feedback diagram with Maths
+11) newCommand in Latex
