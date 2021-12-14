@@ -1,0 +1,230 @@
+% theme split
+\usepackage{beamerthemesplit}
+
+% theme shadow
+\usepackage{beamerthemeshadow}
+
+% logo
+\logo{\includegraphics[height=1cm]{iitblogo.pdf}}
+
+% sf family, bold font
+\sffamily \bfseries
+
+% running title and author information
+[Presentation using \LaTeX\ and Beamer
+\hspace{0.5cm}
+\insertframenumber/\inserttotalframenumber]
+
+[Kannan Moudgalya]
+
+% equations - from spoken tutorial on equations
+\begin{frame}
+\frametitle{Equations:  from Spoken Tutorial on
+  Equations} 
+Let us start with the model of an inverted
+pendulum:
+\begin{align*}
+\frac d{dt} 
+\begin{bmatrix} x_1 \\ x_2 \\ x_3 \\
+  x_4 \end{bmatrix} & =
+\begin{bmatrix} 
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1 \\
+0 & -\gamma & 0 & 0 \\
+0 & \alpha & 0 & 0
+\end{bmatrix}
+\begin{bmatrix} x_1 \\ x_2 \\ x_3 \\
+  x_4 \end{bmatrix} +
+\begin{bmatrix} 0 \\ 0 \\ -\delta \\
+  -\beta \end{bmatrix} \Delta\mu
+%
+\intertext{Proportional, integral, derivative
+  controller is most popular in industry.  It has
+  three tuning parameters: $K$, $\tau_i$ and
+  $\tau_d$.  The integral mode includes the term
+  $\int_0^t()dt$.}  
+u(t) & = K \left\{ e(t)+\frac
+  1{\tau_i}\int_0^te(t)dt + \tau_d\frac{de(t)}{dt}
+\right\}
+\end{align*}
+\end{frame}
+
+% change colour of one side of equation to blue
+
+% simple animation
+\begin{frame}
+  \frametitle{From Spoken Tutorial on Letter
+    Writing}
+National Mission on Education through ICT, with an
+outlay of Rs. 4,600 crore (\$ 1 billion): \pause
+\begin{enumerate}
+\item<+-|alert@+> Rs. 1,800 crore has been reserved for
+  content generation and the rest to establish good
+  connectivity in all 20,000 colleges and 200
+  universities.
+\item<+-|alert@+> Support for all good proposals,
+  including those from private colleges.
+\item<+-|alert@+> All products funded by this mission
+  will be delivered as open source.
+\item<+-|alert@+> Web based support through
+  www.sakshat.ac.in.
+\end{enumerate}
+\end{frame}
+
+% change the alerted colour to blue
+\setbeamercolor{alerted text}{fg=blue}
+
+% change the colour to brown and then to blue again
+
+% including figures
+\begin{frame}
+\frametitle{Example of a Figure}
+\begin{center}
+\includegraphics[width=\linewidth]{iitb}
+\end{center}
+\end{frame}
+
+% guidelines for including figures
+\begin{frame}
+\frametitle{Hints for Including Figures}
+\begin{itemize}
+\item<+-> Do not use floated environments in
+  presentations 
+  - \\ {\tt begin\{figure\}}, {\tt end\{figure\}}, 
+  etc. 
+\item<+-> Use {\tt includegraphics} directly
+\item<+-> Do not include {\tt caption}, figure
+  number, etc.
+\item<+-> The audience will not remember figure
+  numbers, any way
+\item<+-> If you want to refer to a previously
+  shown figure, show it again - do not refer to it
+  by number
+\end{itemize}
+\end{frame}
+
+% two columns
+\begin{frame}
+\frametitle{Two Columns}
+\begin{minipage}[c]{0.45\textwidth}
+\begin{enumerate}
+\item<+-|alert@+> Rs. 1,800 crore has been reserved for
+  content generation and the rest to establish good
+  connectivity in all 20,000 colleges and 200
+  universities.
+\item<+-|alert@+> Support for all good proposals,
+  including those from private colleges.
+\end{enumerate}
+\end{minipage} 
+\hfill
+\begin{minipage}[c]{0.45\textwidth}
+\includegraphics[width=\linewidth]{iitb}
+\end{minipage}
+\end{frame}
+
+% example of a Table
+\begin{frame}
+\frametitle{Table: From Spoken Tutorial on Tables} 
+\begin{center}
+\begin{tabular}{||l|c|c|c|r|}\hline
+\multicolumn 2 {||c|}{Fruit details} & 
+\multicolumn 3 {c|}{Cost calculations} \\ \hline
+Fruit & Type & No. of units & cost/unit & cost (Rs.) \\
+\hline 
+Mango & Malgoa & 18 & 50 &  \\ \cline{2-4}
+      & Alfonso & 2 & 300 & 1,500 \\ \hline
+Jackfruit & Kolli Hills & 10 & 50 & 500 \\ \hline
+Banana & Green & 10 & 20 & 200 \\ \hline
+\multicolumn 4{||r|}{Total cost (Rs.)} & 2,200 \\
+\hline 
+\end{tabular}
+\end{center}
+\end{frame}
+
+% guidelines for including Tables
+\begin{frame}
+\frametitle{Hints for Including Tables}
+\begin{itemize}
+\item<+-> Do not use floated environments in
+  presentations 
+  - \\ {\tt begin\{table\}}, {\tt end\{table\}}, 
+  etc. 
+\item<+-> Use {\tt tabular} directly
+\item<+-> Do not include {\tt caption}, Table
+  number, etc.
+\item<+-> The audience will not remember Table
+  numbers, any way
+\end{itemize}
+\end{frame}
+
+% different animation in the previous slide
+
+% convert document into handout
+
+% using fragile with verbatim
+\begin{frame}[fragile]
+\frametitle{Example of Verbatim to Illustrate Scilab}
+\begin{verbatim}
+-->a = 1:5, b = 1:2:9
+\end{verbatim}
+{\color{blue}
+\begin{verbatim}
+ a  =
+ !   1.    2.    3.    4.    5. !
+ b  =
+ !   1.    3.    5.    7.    9. !
+\end{verbatim}}
+
+\begin{verbatim}
+-->a - 2
+\end{verbatim}
+{\color{blue}
+\begin{verbatim}
+ans  =
+ ! - 1.    0.    1.    2.    3. !
+\end{verbatim} }
+\end{frame}
+
+% where to get more information
+\begin{frame}
+\frametitle{Where to Get more Information on
+  Beamer?} 
+\begin{itemize}
+\item<+-|alert@+> Authoritative source: user guide to the Beamer class
+\item<+-|alert@+> Author: Till Tantau
+\item<+-|alert@+> File name: 
+  {\color{magenta} \tt beameruserguide.pdf} 
+\item<+-|alert@+> email: tantau@users.sourceforge.net 
+\item<+-|alert@+> At the time of creating this
+  tutorial, available at \\
+{\color{magenta} \small http://www.ctan.org/tex-archive/macros/latex/contrib/beamer/doc/beameruserguide.pdf}
+\item<+-|alert@+> The web page for the Beamer
+  project is
+{\color{magenta} http://latex-beamer.sourceforge.net}
+\end{itemize}
+\end{frame}
+
+% scroll user guide, copy one frame from there
+
+% change back to presentation
+
+% acknowledgement
+\begin{frame}
+\frametitle{Acknowledgement}
+\begin{itemize}
+\item Funding to create this tutorial has came from
+  the \\ National Mission on Education through ICT
+\item Web site for this mission:
+  {\color{magenta} http://sakshat.ac.in}
+\end{itemize}
+\end{frame}
+
+% feedback
+\begin{frame}
+\frametitle{Feedback}
+\begin{itemize}
+\item We have come to end of this tutorial
+\item Thanks for joining 
+\item Please give your feedback at kannan@iitb.ac.in
+\end{itemize}
+\end{frame}
